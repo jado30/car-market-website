@@ -1,0 +1,12 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Large media
+assets/videos/
+assets/raw/

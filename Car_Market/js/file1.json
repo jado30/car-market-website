@@ -1,0 +1,32 @@
+[
+    {
+        "class" : "box active",
+        "img_url" : "./images/pngegg (4).png",
+        "h3" : "newmodel",
+        "price" : "1,200,000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "./images/pngegg (5).png",
+        "h3" : "newmodel",
+        "price" : "1,200,000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "./images/pngegg (7).png",
+        "h3" : "newmodel",
+        "price" : "1,200,000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "./images/pngegg (13).png",
+        "h3" : "newmodel",
+        "price" : "1,200,000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "./images/pngegg (14).png",
+        "h3" : "newmodel",
+        "price" : "1,200,000"
+    }
+]

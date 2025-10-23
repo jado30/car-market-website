@@ -1,0 +1,502 @@
+:root {
+    --yellow: #f9d806;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --border: .1rem solid rgba(0, 0, 0, 0.1);
+    --box-shaddow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --header-height: 3.5rem;
+    --nav-width: 219px;
+
+    /*========== Colors ==========*/
+    --first-color: #6923D0;
+    --first-color-light: #F4F0FA;
+    --title-color: #19181B;
+    --text-color: #58555E;
+    --text-color-light: #A5A1AA;
+    --body-color: #F9F6FD;
+    --container-color: #FFFFFF;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: .938rem;
+    --small-font-size: .75rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-fixed: 100;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 85%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    z-index: 999;
+    transition: all 0.5s ease;
+    margin-top: 10.5rem;
+}
+
+.sidebar.openn {
+    width: 250px;
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar .logo-details .icon {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo-details .logo_name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.openn .logo-details .icon,
+.sidebar.openn .logo-details .logo_name {
+    opacity: 1;
+}
+
+.sidebar .logo-details #btnn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.openn .logo-details #btnn {
+    text-align: right;
+}
+
+.sidebar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar li .tooltip {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar.openn li .tooltip {
+    display: none;
+}
+
+.sidebar input {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #1d1b31;
+}
+
+.sidebar.openn input {
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
+.sidebar .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #1d1b31;
+    color: #fff;
+}
+
+.sidebar.openn .bx-search:hover {
+    background: #1d1b31;
+    color: #fff;
+}
+
+.sidebar .bx-search:hover {
+    background: #fff;
+    color: #11101d;
+}
+
+.sidebar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #11101d;
+}
+
+.sidebar li a:hover {
+    background: #fff;
+}
+
+.sidebar li a .links_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.openn li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: #11101d;
+}
+
+.sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.sidebar li.profile {
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #1d1b31;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.sidebar.openn li.profile {
+    width: 250px;
+}
+
+.sidebar li .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sidebar li img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.sidebar li.profile .job {
+    font-size: 12px;
+}
+
+.sidebar .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #1d1b31;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.openn .profile #log_out {
+    width: 50px;
+    background: none;
+}
+
+
+
+/* end of sidebar */
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: var(--light-yellow);
+    color: var(--black);
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background: var(--yellow);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3%;
+}
+
+.header .adbtn {
+    display: inline-flex;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: var(--light-yellow);
+    color: var(--black);
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header .adbtn:hover {
+    background: var(--yellow);
+}
+
+.header .adbtn1 {
+    margin-right: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+/* .header .adbtn::before{
+    content: "+";
+    height: 4rem;
+    width: 13rem;
+    position: absolute;
+    top:3.1rem;
+    right: 5rem;
+    border-radius: .5rem;
+    background-color:rgb(128, 128, 128,0);
+    color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    visibility: visible;
+}
+.header .adbtn::before:hover{
+    background-color:rgb(128, 128, 128,0.5);
+} */
+
+
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo span {
+    color: var(--yellow);
+
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--yellow);
+}
+
+.header #login-btn i {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+    display: none;
+}
+
+.header.active {
+    box-shadow: var(--box-shaddow);
+    padding: 2rem 9%;
+}
+
+#menubar {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.login-form-container {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+.login-form-container form {
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shaddow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+
+.login-form-container form .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.login-form-container form h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form-container form .box {
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.login-form-container form p a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+}

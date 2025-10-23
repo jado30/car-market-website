@@ -1,0 +1,50 @@
+[
+    {
+        "class" : "box active",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    },
+    {
+        "class" : "box",
+        "img_url" : "images/IMG_5458.jpg",
+        "h3" : "newmodel",
+        "price" : "1,200,000",
+        "year" : "2023",
+        "speed" : "2000"
+    }
+]

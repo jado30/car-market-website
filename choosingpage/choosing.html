@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web Addicted- Card Outer Glow Effect</title>
+  <link rel="stylesheet" href="choosing.css">
+  <link rel="stylesheet" href="../‏‏icon - نسخة/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="face face1" onclick="redirectToLink('../user_switching_loginpage/switching.html')">
+        <div class="content">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>User</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>for normal users only</p>
+        </div>
+      </div>
+    </div>
+    <div class="h22">
+      <h2>choose who you are ???</h2>
+    </div>
+    <div class="card">
+      <div class="face face1" onclick="redirectToLink('#popup1')">
+        <div class="content">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Admin</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>for admins password required !!!!</p>
+        </div>
+      </div>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2> password Required !!!</h2>
+        <a class="close" href="#">&times;</a>
+        <input type="password" class="confirm_pass" id="passworddd" placeholder="password" required
+          onfocus="changeIconColor()" onblur="resetIconColor()">
+        <!-- <label for="">password</label> -->
+        <i class="fa-solid fa-lock fa-1x icon" id="locki"></i>
+        <button type="submit" class="submit" onclick="redirectToLink2()">confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="choosing.js">
+
+  </script>
+</body>
+
+</html>

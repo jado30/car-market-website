@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "ef3f51e4-c01f-449a-89ec-0e8006406984",
+		"name": "project 2 uni",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18451181"
+	},
+	"item": [
+		{
+			"name": "car api's",
+			"item": [
+				{
+					"name": "create a new car",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGFlYWYwMzlhZjQ4OGJmOWU0MWEwYzQ1Y2ZkOWE2NzcxMTRjODZiMzIxMmE1OTlhOWYxMTJjMmVkNDE3NDMwMmRhNDA5NDdhYzI1OWQ5NWMiLCJpYXQiOjE2Mzk5OTkzNTQuMzk0NzUzLCJuYmYiOjE2Mzk5OTkzNTQuMzk0NzY1LCJleHAiOjE2NzE1MzUzNTQuMzgyMTQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LlN6FzBubHJ6xeDyHZYV7aPKFTdN49NdzMtPTxYP7yPj-PQpSiRa8dEf5DGJ1Of8cKLmWqMvAMywfKRIgkXs3zAOlVUcKNN3X8KjzzL8hCb4GYbIZ0xld1YmWymXrngMPTKEjtx8KAk9ISze1nWmQ_DxqWulsu4VPM30xP1hPgtFCUq-R5BgO5qUm_PVLFC0Ksw8t4oSxuU3j60OESOlLXNiiEPNs_LstBcSurPMGVcdW8_VE_YSqlPGDWNxIEdX5ADF4sVWSbF8obtuvQBndhoHXDv3LR1GkeLUD_bP0o-v50871P1mFASuTbD8SzoMOPRRZ1B-5mk2ma2P1rPVs2QJhErxVMC8BrYW2CITqbl2ATBFcGgWu0jFM80Q-tAr5MeEHBe6F2nufwYxvPlXjMZIwRbT7DRJxmuPHoMt45Lswuv6p6kntMEhfhNWO_uIqLrLt_Sjkqn3Khuu3vkLw2VQgcaioruWc2L1VvFuK7CYKIsmy-w6gw2KCV11gp8m5vk_ReNmay4LK0LXz3kvh4MoO1Qml3N3NfYEcM6Fosta7HH_eKlt1UW2GZ8XpzBUQdeK_MMwSMH5SgXENDaMV82bAKIqTwTNomk5PuVTjOIUfouILY7OGjUXEByN8b0o8I-k1BCX6MakwxzcFKrWxQw2D6t2teB_oedkrlbx-68",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"exapmle3\",\r\n    \"book_cost\":\"30\",\r\n    \"description\":\"sample text\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/create-book",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"create-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user's listed cars",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzIyYTRiOTNiOTg1ZjUxNWViZWE1NzU3NDFhMjU1MjIxYzk5OWUzMjJkODE3OTI2NmYyZDNiZDkwMDc5MWRlZTFlNzllMGZkNjIzOGNhOTMiLCJpYXQiOjE2Mzk5MDcxNzguNjIzMDA0LCJuYmYiOjE2Mzk5MDcxNzguNjIzMDA5LCJleHAiOjE2NzE0NDMxNzguNjE1NTEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JrDUiWalmwht6iUGXzPTzHTaC_pyRwi90BGu0tZyrAf-PKxc7xLW-k1kmBf2VtBfEmaJLqnQvyS7xZ99VIfsutV2Avsw2cA0vKaC3nVdDXVhh0Jt3NwwHSCxy32q81I2SH_KHFe9JE9WWhtgUBAaMelpjZNQvlKQjd-Ff70Nxce68SbQMPOdjIIyA71teNVb7EoB8OVkqB3JuEO95hzXiPQh3pleVmwsx8XsXYOitKiqAckyzfBHDtn3E0sSUMnIisiz8-fcPwyw2iySGBde7ADGVPdzTZ3x5wtHEgpsKNyrnBqsfjCHMus9hJ7ASkXuk0kGjpeJ5iihy9k6Ty1jGK5W1vvLh0AxkZNf9_RrCMe4SwxBckt7tZAkbYU38jtM-v8Zv1HzeQNJdOE7vD_YYvLIiuN3vi10Yid9jCDz7CQLLLFPsH7Nv43mYSrN4qUd3Ccm58XFR4bYXS5ljQihEbyztevrxpGTB45EpuqOBp7W0MEbYLuhQxMXCr7BprYML_NdO0s6XC7TNwju4gIpAI73GlQlFxr9knC7Mgf7VJy8V1-Te21e28Hcj77e4ZiMYhuDNjFGKEnLba_tT4Yi-113e4IXfz1VBoQKaOdO_x5_uawRBZUwOSj3r2l4xC9AYQiHJaMHiArERHJRh7EOmve3Clj9QNolU-Pl9t7e7LE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"title\":\"exapmle2\",\r\n    \"book_cost\":\"30\",\r\n    \"description\":\"sample text\",\r\n    \"author_id\":\"2\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/author-book",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"author-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search cars by brand",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/search_Car/o",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"search_Car",
+								"o"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWQyZWUyNTAyZDkxZTNmNTNhNjliZDg1ODliYmUyYTdhMDYxOGNhMDRmYTVjNzljZTIyNzBjZGQxNDViNDAzYzc2ODRhOWI3NTc4MjViNDQiLCJpYXQiOjE3MTgxNzgzOTQuNzk3ODgxLCJuYmYiOjE3MTgxNzgzOTQuNzk3ODg1LCJleHAiOjE3NDk3MTQzOTQuNzg4OTI4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.G39mouP2DHqkLWUwUUXKxLo6WJyfFuekSq00_WfpXuSfIrOydx2_NvyKtWmJl4SBhqstIx4mkwCYFEekZLxEZhS47gCjS-iDimKeBudsSs6m8-UhWT8QBYW31nRAx1AiSuktOYOJmIFe268hrbObi7No6e92DvjSbLMjlANfhb46ysnMf8EkCkZugwiwgQ_N6aP7fcnokIBLbedDJ-IsOhtDDDHrXPB9liKEpC7EAMErOJW1fiV5J5TeYgQ1bBXcCV612xLnVpkAkfGu-ub2aBmjSeog6F0fzjBUJ_qr4CoeFrEgzzsVuRTYP9NzI3em7Dwh6P8y8GiXMCJ3Q8rWsoOPktQUoX4p0EMK058HC2FA-UjNjG9vmJ5Zs-zkcaNfd3NbgB2s_d5vBEmhPX3fAEbo6J3m55bnn_DjZeO3By4ISxaXLSa3XRp6BD1MtSjRILgVxMjFE9MLPEfAMEfU0WPsdmz5fxJdbf1LVs9QNGZzT3YcbCODZcpHrjCcaKkZLJJxzoTCtKyFr6ZYuGAu2a36SeRUaix_Z9i-z78cfHobZYqmra_Azvv5jLDIN0sP_g8TH0uJPkAnTtGAqfmFy1Sd1GM9dWQwngcLzeHnkMCCc1Fwd2gzHpQq0vJaPkTJvhlpbhCs8jQuJszvb6ShEHMyyhH7sLkWGR8EiHrUWUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete-Car/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-Car",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user car",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user api's",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"aftosim\",\r\n    \"email\":\"aftosim@gmail.com\",\r\n    \"password\":\"@ftosim\",\r\n    \"password_confirmation\":\"@ftosim\",\r\n    \"phone_no\":\"099035\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"wissam@gmail.com\",\r\n    \"password\":\"someh2001\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWRiZGY3YWEyMWQ2MGQwMDY4ZTY3NjllYjA5MmE3MjZkYTJlZDVkOWQyM2E3MTMzOTZmZjExYjZiMDI3YmUyMTY3YzE4ZWI5YmVhMGIwOTEiLCJpYXQiOjE2NDAwNzA0MDUuMzg0MzIzLCJuYmYiOjE2NDAwNzA0MDUuMzg0MzI4LCJleHAiOjE2NzE2MDY0MDUuMzc4MjU4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KStqcPqhO6L_g0Sv-gf8qz27a_dgkwjq6ZK3vBxgqndGnjVrHVt92FeCEXzxUEdbMtUI0s6GMpO4zCVCK9MvvJQ-LuyvSGxjZF29KcslcOFUP9MsG7_synGwCy3ycaWHiRxSt-9rL3BVdZx_0TaNKFAx4h6s3C-5VsrpilV6vcAYbcZNPStsPWHVpLlE4UK323Ay1utVy_FJR__mfC0CEpm3FgzIew0M0gdKBH8CC-h9Iv-n5Sm5IYq9d4m5mgPFG5tU10PwfVR92wtUKiOxjXr1SXdD7rmC2gwT8Jvn4JS9B7jmQA9hoQW1Yf4DZSQi0AyOvJQ3IBzYbfbPj9eD9uJTx_ov2t3UJFeaEGiOtZ2J8iLLOnr1np7Tq1v3wBIfKpF2sACMRb11WkgqLFwWNuAEy5ItIFPZjmLDoJwHGMt5-XXwsCdq85CNDgkU_zGkdWFl461uWHIUX7lo9MvYHvQsW-E_wrefLUG2slVbO0hBc1TR2lVmylcqu_QIXLhj5fAzy5C2pWkM_kjg90tRECgDiC9zNEOfWB8b0d0vzEAGLciTVffNG-a0Z0nZZvqRseZH-jF6J2U-nO-d_Mm7--EPJjss4iRbDvbQEmM_RkTR7PvCLaZXMu26LaggRzHtnjTRC0_ebGl-qglhAkMFT5OOrxlIPDTV6rw1rag56yw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"wissam@gmail.com\",\r\n    \"password\":\"someh2001\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTgyM2Q0N2ZhMjljOWFmZmZkZDIyZGI4OTBhYWNkMDRjNTU2NjIwNTFiMWU0YzNiZjQxYTllYmJhY2YxZmM4MmUzM2Y3NjNmYzBhNzQwZWIiLCJpYXQiOjE2Mzk5OTg1MjkuMDY3MjAyLCJuYmYiOjE2Mzk5OTg1MjkuMDY3MjE0LCJleHAiOjE2NzE1MzQ1MjkuMDUyMDIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.jcDUPeZ4XBBHtMLS3fkK-ilEW-SdKhFB2KexQdtNgj7-DZlhSfWgj6I5AwHy3BItV98ktivaMvcuJoGgpt7qSuCGgdT9zZgLBym6DVhcjP_wJr7IWUiIb7-zJ_6F5_E_c8ihaJS9FOTB0ceF-8t61pYGT-KEw7o3QXuoeliNt0Pvz-efxHf2MoTLmXvm_aWVOH0MOtUmw20w7JFKOZkx__3qBGj0r8vE_u1wGZMlV7XDaa7ML_MC0N3PWKtmcCRA0aw_IEOQdZtPtglyEADw49IKEm5XKmrxKkyK8xlCOolN-TdkVYvA0wJGM2Hoqh5XhdI24CkaRaHKRlMJ39x3Db2ULRICKW5MofWnq3fjib-w_UG_MpPIepP3znVG4nlz0hifdvCKWkiaT7ckMRmo4qBiQcwxiqedo_7GcyCqj-f6ElhLRa846uUIJQC8TXKkad9wFI06i0tGwAwY6UX2bkmy387AaYJU-muFmy0VS2WrmOdAoqUB6zOaE65hrrXW5SyTDeAv9XjYIhQujUIrGfa7O1Om_MP7ij-_wALDonc6kfw3ReI81jXtOXiLTh3ppQx22ARKFEfOIbTI6Y0YABL2DiAxZcZjMQOEeNN8YmvdX6KhcIxPs6IZo_GwAnwKEet3-zwDr3lPgKREXzYFUJTnuqywnDK4ZyQQAVt3MNM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shana@gmail.com\",\r\n    \"password\":\"sh@n@\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:1000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "1000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "commets folder",
+			"item": [
+				{
+					"name": "create comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWQyZWUyNTAyZDkxZTNmNTNhNjliZDg1ODliYmUyYTdhMDYxOGNhMDRmYTVjNzljZTIyNzBjZGQxNDViNDAzYzc2ODRhOWI3NTc4MjViNDQiLCJpYXQiOjE3MTgxNzgzOTQuNzk3ODgxLCJuYmYiOjE3MTgxNzgzOTQuNzk3ODg1LCJleHAiOjE3NDk3MTQzOTQuNzg4OTI4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.G39mouP2DHqkLWUwUUXKxLo6WJyfFuekSq00_WfpXuSfIrOydx2_NvyKtWmJl4SBhqstIx4mkwCYFEekZLxEZhS47gCjS-iDimKeBudsSs6m8-UhWT8QBYW31nRAx1AiSuktOYOJmIFe268hrbObi7No6e92DvjSbLMjlANfhb46ysnMf8EkCkZugwiwgQ_N6aP7fcnokIBLbedDJ-IsOhtDDDHrXPB9liKEpC7EAMErOJW1fiV5J5TeYgQ1bBXcCV612xLnVpkAkfGu-ub2aBmjSeog6F0fzjBUJ_qr4CoeFrEgzzsVuRTYP9NzI3em7Dwh6P8y8GiXMCJ3Q8rWsoOPktQUoX4p0EMK058HC2FA-UjNjG9vmJ5Zs-zkcaNfd3NbgB2s_d5vBEmhPX3fAEbo6J3m55bnn_DjZeO3By4ISxaXLSa3XRp6BD1MtSjRILgVxMjFE9MLPEfAMEfU0WPsdmz5fxJdbf1LVs9QNGZzT3YcbCODZcpHrjCcaKkZLJJxzoTCtKyFr6ZYuGAu2a36SeRUaix_Z9i-z78cfHobZYqmra_Azvv5jLDIN0sP_g8TH0uJPkAnTtGAqfmFy1Sd1GM9dWQwngcLzeHnkMCCc1Fwd2gzHpQq0vJaPkTJvhlpbhCs8jQuJszvb6ShEHMyyhH7sLkWGR8EiHrUWUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"body\": \"nice car!!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/create_comment/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"create_comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARS SPEAKS</title>
+    <link rel="stylesheet" href="KBS.css">
+    <script src="KBS.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form id="signupForm" action="">
+                <h2>Complete Your Sign Up</h2>
+                <div class="input-group">
+                    <label for="risk-level">how much do you classify your hourse power? <i class="fa-solid fa-house"></i></label>
+                    <input type="range" id="risk-level" name="risk-level" min="1" max="3" value="2" step="1"
+                        class="slider">
+                    <div class="slider-labels">
+                        <span>low</span>
+                        <span>moderate</span>
+                        <span>high</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="risk-level">What does your budget classify?</label>
+                    <input type="range" id="risk-level" name="risk-level" min="1" max="3" value="2" step="1"
+                        class="slider">
+                    <div class="slider-labels">
+                        <span>Low</span>
+                        <span>Moderate</span>
+                        <span>High</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="risk-level" class="dtype">what is your car drive type</label>
+                    <input type="range" id="risk-level" name="risk-level" min="1" max="3" value="2" step="1"
+                        class="slider">
+                    <div class="slider-labels">
+                        <span>four_wheel <p>drive</p></span>
+                        <span>rear_wheel<p>drive</p></span>
+                        <span>all_wheel<p>drive</p></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn" id="Rbtn" onclick="redirectToLink('../Car_Market/index.html')">Confirm</button>
+                    <button type="button" class="btn" id="Bbtn" onclick="redirectToLink('../Car_Market/index.html')">Skip</button>
+                </div>                
+
+                <div class="error-message" id="error-message"></div>
+            </form>
+        </div>
+
+        
+</body>
+
+</html>

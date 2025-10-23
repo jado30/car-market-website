@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Title and favicon-->
+    <title>MyGithub</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="uc.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/xcss/boxicons.min.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <script src="https://kit.fontawesome.com/1026016592.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+
+        <div id="menubar" class="fa-solid fa-bars"></div>
+
+        <a href="#" class="logo">Cars <span>speak</span></a>
+
+        <!-- navbar section -->
+        <nav class="navbar">
+            <a href="#" class="home">Home</a>
+            <a href="#vehicales" class="vehicales">vehicales</a>
+            <a href="#services" class="services">services</a>
+            <a href="#featured" class="featured">featured</a>
+            <a href="#reviews" class="reviews">reviews</a>
+            <a href="#contact" class="contact">contact</a>
+        </nav>
+        <!-- login button -->
+        <div id="login-btn">
+            <button type="button" class="adbtn" onclick="redirectToLink('#popup1')">add car</button>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </header>
+
+    <!-- side bar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">Cars Speak</div>
+            <i class='bx bx-menu' id="btnn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart'></i>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="./images/4.jpg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Stella Army</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card_background_img"></div>
+        <div class="card_profile_img"></div>
+
+        <div class="user_details">
+            <h3 id="user-name">Gordon Ramsay</h3>
+            <p id="user-email">Loading...</p>
+        </div>
+        <div class="card_count">
+            <div class="count">
+                <div class="fans">
+                    <h3>price_preference</h3>
+                    <p id="price-preference">Loading...</p>
+                </div>
+                <div class="following">
+                    <h3>hp_preference</h3>
+                    <p id="hp-preference">Loading...</p>
+                </div>
+                <div class="post">
+                    <h3>drive_type_preference</h3>
+                    <p id="drive-type-preference">Loading...</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenir">
+
+            <input type="text" class="search" id="search-inp" placeholder="Search...">
+
+            <button class="search-btn" id="search-inp-btn">&#x027A4;</button>
+
+        </div>
+        <section class="vehical" id="vehicales">
+
+            <h1 class="heading">My <span>vehicals</span></h1>
+
+            <div class="slider">
+                <div class="wrapper">
+                    <i class="fa-solid fa-angle-left prenext" id="prebtn"></i>
+
+                    <div class="wrapper-box">
+
+                    </div>
+                    <i class="fa-solid  fa-angle-right prenext" id="nextbtn"></i>
+                </div>
+
+                <div class="activecircle">
+                    <div class="fa-regular fa-solid fa-circle"></div>
+                    <div class="fa-regular fa-circle"></div>
+                    <div class="fa-regular fa-circle"></div>
+                    <div class="fa-regular fa-circle"></div>
+                    <div class="fa-regular fa-circle"></div>
+                    <div class="fa-regular fa-circle"></div>
+                </div>
+
+            </div>
+
+    </div>
+    </section>
+
+    <div id="popup2" class="overlay3">
+
+    </div>
+
+    <!-- pop up  -->
+    <div id="popup1" class="overlay1">
+        <div class="popup">
+            <form id="addCarForm" autocomplete="off" onsubmit="return false;">
+                
+                <a class="close" href="#prebtn">&times;</a>
+    
+                <label for="cname" class="l" id="label1">Car name</label>
+                <input type="text" name="make" class="confirm_pass" placeholder="Car Make (e.g., BMW)" id="cname" required>
+    
+                <label for="cyear" class="l" id="label5">Producing year</label>
+                <input type="text" name="year" id="cyear" class="confirm_pass" placeholder="Year" required>
+    
+                <label for="ehp" class="l" id="label5">Engine HP</label>
+                <input type="text" name="engine_hp" id="ehp" class="confirm_pass" placeholder="Horsepower" required>
+    
+                <label for="cprice" class="l" id="label6">Transmission type</label>
+                <input type="text" name="transmission_type" id="cprice" class="confirm_pass" placeholder="Transmission Type" required>
+    
+                <label for="cspeed" class="l" id="label7">Driven Wheels</label>
+                <input type="text" name="driven_wheels" id="cspeed" class="confirm_pass" placeholder="Driven Wheels (e.g., rear_wheel_drive)" required>
+    
+                <label for="popularity" class="l" id="label8">Popularity</label>
+                <input type="text" name="popularity" id="popularity" class="confirm_pass" placeholder="Popularity" required>
+    
+                <input type="reset" value="Reset" class="reset">
+                <button class="submit" onclick="submitttForm()">Next</button>
+    
+            </form>
+        </div>
+    </div>
+    
+    <div id="popup-second" class="overlay4">
+        <div class="popup1">
+            <form id="addCarForm" autocomplete="off" onsubmit="return false;">
+
+                <a class="close" href="#prebtn">&times;</a>
+
+                <label for="username" class="l" id="label1">auto or gear</label>
+                <input type="text" name="username" class="confirm_pass" placeholder="name" id="cname1" required>
+
+                <label for="productCode" class="l" id="label2">faced pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass1"
+                    id="input-file1">
+
+                <label for="productCode" class="l" id="label3">side pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass1"
+                    id="input-file2">
+
+                <label for="productCode" class="l" id="label4">side pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass1"
+                    id="input-file3">
+
+                <label for="product" class="l" id="label5">Producing year</label>
+                <input type="text" name="product" id="cyear1" class="confirm_pass1" placeholder="year">
+
+
+                <div class="prediction">
+                    <label for="qty" class="l" id="label6">Price</label>
+                    <div class="inprediction">
+                        <input type="number" name="qty" id="cprice1" class="confirm_pass1" placeholder="Price">
+                        <p>recommended price by AI:<span class="prediction-value" id="prediction-value">5000</span></p>
+                    </div>
+                </div>
+
+                <input type="reset" value="Reset" class="reset">
+
+                <input type="submit" value="Submit" class="submit" onclick="submitCarr()">
+
+            </form>
+
+
+        </div>
+    </div>
+    <section class="footer">
+        <div class="footer-container">
+
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>india</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>france</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>africa</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>austria</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>rassia</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fa-solid  fa-arrow-right"></i>home</a>
+                <a href="#vehicales"><i class="fa-solid  fa-arrow-right"></i>vehicales</a>
+                <a href="#services "><i class="fa-solid  fa-arrow-right"></i>services </a>
+                <a href="#featured "><i class="fa-solid  fa-arrow-right"></i>featured </a>
+                <a href="#reviews  "><i class="fa-solid  fa-arrow-right"></i>reviews </a>
+                <a href="#contact  "><i class="fa-solid  fa-arrow-right"></i>contact </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fa-solid  fa-phone"></i>+123-456-7890</a>
+                <a href="#home"><i class="fa-solid  fa-phone"></i>+111-222-7777</a>
+                <a href="#home"><i class="fa-solid  fa-envelope"></i>carsell3X9</a>
+            </div>
+
+            <div class="box" id="foot-img">
+                <h3>instagram</h3>
+                <div>
+                    <img src="./images/footer1.jpg" alt="" class="footer-img">
+                    <img src="./images/footer2.jpg" alt="" class="footer-img">
+                    <img src="./images/footer3.jpg" alt="" class="footer-img">
+                    <img src="./images/footer1.jpg" alt="" class="footer-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- featured end -->
+
+    <script src="uc.js"></script>
+</body>
+
+</html>

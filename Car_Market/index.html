@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars speak</title>
+    <!-- icon file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/xcss/boxicons.min.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+
+        <div id="menubar" class="fa-solid fa-bars"></div>
+
+        <a href="#" class="logo">Cars <span>speak</span></a>
+
+        <!-- navbar section -->
+        <nav class="navbar">
+            <a href="#" class="home">Home</a>
+            <a href="#vehicales" class="vehicales">vehicales</a>
+            <a href="#services" class="services">services</a>
+            <a href="#featured" class="featured">featured</a>
+            <a href="#reviews" class="reviews">reviews</a>
+            <a href="#contact" class="contact">contact</a>
+        </nav>
+        <!-- login button -->
+        <div id="login-btn">
+            <button type="button" class="btn adbtn1"
+                onclick="redirectToLink('../../user_switching_loginpage/switching.html')">Login</button>
+            <button type="button" class="adbtn"
+                onclick="redirectToLink('#popup1')">add car</button>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </header>
+    <!-- header end -->
+
+
+
+    <!-- side bar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">Cars Speak</div>
+            <i class='bx bx-menu' id="btnn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+    
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart'></i>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+           
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="./images/4.jpg"
+                        alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Stella Army</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <!-- sidebar end -->
+
+
+    <!-- home start -->
+
+    <section class="home1">
+        <div class="video">
+            <video src="./video (2160p).mp4" autoplay loop muted></video>
+            <h1 class="title">Cars <br>
+                Speak</h1>
+        </div>
+    </section>
+
+    <section class="home" id="home">
+        <h1 class="home-parallax" data-speed="-2">find your car</h1>
+        <img class="home-parallax" data-speed="5" src="images/bg.png" alt=""><br>
+        <a class=" btn home-parallax" data-speed="7" href="#vehicales">Explore new cars</a>
+        <a class=" btn home-parallax" data-speed="7" href="#vehicales">Explore used cars</a>
+    </section>
+    <!-- home end -->
+
+    <!-- icon starts -->
+    <section>
+        <div class="icon-container">
+            <di class="icons">
+                <i class="fa-solid fa-house"></i>
+                <div class="content">
+                    <h3>100+</h3>
+                    <p>branches</p>
+                </div>
+            </di>
+
+            <di class="icons">
+                <i class="fa-solid fa-car"></i>
+                <div class="content">
+                    <h3>5100+</h3>
+                    <p>cars sold</p>
+                </div>
+            </di>
+
+            <di class="icons">
+                <i class="fa-solid fa-users"></i>
+                <div class="content">
+                    <h3>700+</h3>
+                    <p>happy clinets</p>
+                </div>
+            </di>
+
+            <di class="icons">
+                <i class="fa-solid fa-car"></i>
+                <div class="content">
+                    <h3>200+</h3>
+                    <p>new cars</p>
+                </div>
+            </di>
+
+        </div>
+    </section>
+
+    <!-- icon end -->
+
+    <!-- vehicales starts -->
+
+    <section class="vehical" id="vehicales">
+        <h1 class="heading">New <span>vehicals</span></h1>
+
+        <div class="slider">
+            <div class="wrapper">
+                <i class="fa-solid fa-angle-left prenext" id="prebtn"></i>
+
+                <div class="wrapper-box">
+
+                </div>
+                <i class="fa-solid  fa-angle-right prenext" id="nextbtn"></i>
+            </div>
+
+            <div class="activecircle">
+                <div class="fa-regular fa-solid fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section class="vehical" id="vehicales">
+        <h1 class="heading">Used <span>vehicals</span></h1>
+
+        <div class="slider">
+            <div class="wrapper">
+                <i class="fa-solid fa-angle-left prenext" id="prebtn1"></i>
+
+                <div class="wrapper-box1">
+
+                </div>
+                <i class="fa-solid  fa-angle-right prenext" id="nextbtn1"></i>
+            </div>
+
+            <div class="activecircle1">
+                <div class="fa-regular fa-solid fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- vehicales end -->
+
+    <!-- services start -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading">our <span>services</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fa-solid fa-car fa-4x"></i>
+                <h3>car selling</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>parts repair</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-car-burst"></i>
+                <h3>car insurance</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-car-battery"></i>
+                <h3>battery replacement</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+
+
+            <div class="box">
+                <i class="fa-solid fa-gas-pump"></i>
+                <h3>oil change</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nesciunt.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- services end -->
+
+    <!-- featured start -->
+
+    <section class="featured" id="featured">
+        <h1 class="heading"><span>featured</span> cars</h1>
+
+        <div class="featured-slider">
+
+            <div class="featured-wrapper">
+                <i class="fa-solid  fa-angle-left fprenext" id="fpretbtn"></i>
+
+                <div class="featured-wrapper2">
+                    <div class="featured-wrapper-box">
+
+                    </div>
+                </div>
+
+                <i class="fa-solid  fa-angle-right fprenext" id="fnextbtn"></i>
+
+            </div>
+            <div class="factcircle">
+                <div class="fa-regular fa-solid fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h1 class="heading">client'<span>review</span></h1>
+        <div class="review-slider">
+            <i class="fa-solid  fa-angle-left rprenext" id="rprebtn"></i>
+            <div class="review-wrapper">
+                <div class="review-wrapper-box">
+
+                    <div class="box active">
+                        <img src="./images/1.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/2.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/3.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/4.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/5.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/6.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="./images/7.jpg" alt="">
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, corrupti.</p>
+                            <h3>john devis</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <i class="fa-solid  fa-angle-right rprenext" id="rnextbtn"></i>
+
+            <div class="ractcircle">
+                <div class="fa-regular fa-solid fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+                <div class="fa-regular fa-circle"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--  review end  -->
+
+
+    <!--  contact start  -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>contact</span> us</h1>
+
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106456.35619973979!2d36.365297245358434!3d33.50759136594661!2m3!1
+            f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e6dc413cc6a7%3A0x6b9f66ebd1e394f2!2z2K_Zhdi02YLYjCDYs9mI2LHZitin!5e0!3m2!1sar!2s!4
+            v1709947570324!5m2!1sar!2s" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <h3>get in touch </h3>
+                <input type="text" class="box" placeholder="name">
+                <input type="email" class="box" placeholder="email">
+                <input type="number" class="box" placeholder="number">
+                <textarea class="box" cols="30" rows="10" placeholder="massage"></textarea>
+                <input type="submit" class="btn" value="send message">
+
+            </form>
+        </div>
+
+    </section>
+
+    <!--  contact end  -->
+
+
+    <!-- footer start -->
+
+    <section class="footer">
+        <div class="footer-container">
+
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>india</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>france</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>africa</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>austria</a>
+                <a href="#"><i class="fa-solid  fa-location-dot"></i>rassia</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fa-solid  fa-arrow-right"></i>home</a>
+                <a href="#vehicales"><i class="fa-solid  fa-arrow-right"></i>vehicales</a>
+                <a href="#services "><i class="fa-solid  fa-arrow-right"></i>services </a>
+                <a href="#featured "><i class="fa-solid  fa-arrow-right"></i>featured </a>
+                <a href="#reviews  "><i class="fa-solid  fa-arrow-right"></i>reviews </a>
+                <a href="#contact  "><i class="fa-solid  fa-arrow-right"></i>contact </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fa-solid  fa-phone"></i>+123-456-7890</a>
+                <a href="#home"><i class="fa-solid  fa-phone"></i>+111-222-7777</a>
+                <a href="#home"><i class="fa-solid  fa-envelope"></i>carsell3X9</a>
+            </div>
+
+            <div class="box" id="foot-img">
+                <h3>instagram</h3>
+                <div>
+                    <img src="./images/footer1.jpg" alt="" class="footer-img">
+                    <img src="./images/footer2.jpg" alt="" class="footer-img">
+                    <img src="./images/footer3.jpg" alt="" class="footer-img">
+                    <img src="./images/footer1.jpg" alt="" class="footer-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- featured end -->
+
+    <!-- pop up  -->
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <form id="addCarForm" autocomplete="off" onsubmit="return false;">
+                
+                <a class="close" href="#prebtn">&times;</a>
+
+                <label for="username" class="l" id="label1">Car name</label>
+                <input type="text" name="username" class="confirm_pass" placeholder="name" id="cname" required>
+
+                <label for="productCode" class="l"id="label2">faced pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass" id="input-file">
+
+                <label for="productCode" class="l" id="label3">side pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass" id="input-file">
+
+                <label for="productCode" class="l" id="label4">side pic</label>
+                <input type="file" name="productCode" accept="image/jpeg, image/png, image/jpg" class="confirm_pass" id="input-file">
+
+                <label for="product" class="l" id="label5">Producing year</label>
+                <input type="text" name="product" id="cyear" class="confirm_pass" placeholder="year">
+
+                <label for="qty" class="l" id="label6">Price</label>
+                <input type="number" name="qty" id="cprice" class="confirm_pass" placeholder="Price">
+
+                <label for="perPrice" class="l" id="label7">speed</label>
+                <input type="number" name="perPrice" id="cspeed" class="confirm_pass" placeholder="Speed">
+
+                <input type="reset" value="Reset" class="reset">
+                <input type="submit" value="Submit" class="submit" onclick="submitCar()">
+
+            </form>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!--  file js -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
